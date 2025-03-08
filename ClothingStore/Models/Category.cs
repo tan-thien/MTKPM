@@ -8,7 +8,8 @@ namespace ClothingStore.Models
         [Key]
         public int IdCate { get; set; }
 
+        
         public string CateName { get; set; }
-        public ICollection<Product> Products { get; set; }
+        public ICollection<Product>? Products { get; set; }
     }
 }

@@ -164,3 +164,4 @@ D:\ClothingStore\ClothingStore\obj\Debug\net8.0\refint\ClothingStore.dll
 D:\ClothingStore\ClothingStore\obj\Debug\net8.0\ClothingStore.pdb
 D:\ClothingStore\ClothingStore\obj\Debug\net8.0\ClothingStore.genruntimeconfig.cache
 D:\ClothingStore\ClothingStore\obj\Debug\net8.0\ref\ClothingStore.dll
+D:\ClothingStore\ClothingStore\obj\Debug\net8.0\ClothingStore.sourcelink.json

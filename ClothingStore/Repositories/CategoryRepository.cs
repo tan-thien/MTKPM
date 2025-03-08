@@ -27,6 +27,7 @@ namespace ClothingStore.Repositories
 
         public async Task AddAsync(Category category)
         {
+            Console.WriteLine("Adding category to DbContext...");
             await _context.Categories.AddAsync(category);
             await _context.SaveChangesAsync();
         }
@@ -37,14 +38,10 @@ namespace ClothingStore.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteAsync(int id)
+        public async Task DeleteAsync(Category category)
         {
-            var category = await _context.Categories.FindAsync(id);
-            if (category != null)
-            {
-                _context.Categories.Remove(category);
-                await _context.SaveChangesAsync();
-            }
+            _context.Categories.Remove(category);
+            await Task.CompletedTask; // Nếu không cần xử lý async thực tế, có thể giữ như vậy
         }
     }
 }

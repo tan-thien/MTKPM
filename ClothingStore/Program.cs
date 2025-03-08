@@ -17,7 +17,9 @@ builder.Services.AddDbContext<ClothingStoreContext>(options =>
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
-
+// Thêm logging vào
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole();
 
 
 
@@ -46,5 +48,7 @@ app.MapControllerRoute(
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Product}/{action=Index}/{id?}");
+
+
 
 app.Run();
